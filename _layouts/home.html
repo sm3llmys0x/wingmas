@@ -58,4 +58,9 @@ layout: base
 
   {%- endif -%}
 
+  {% assign first_wingmas = site.data.wingvenues | where: "wingmasdate", "12/03/2016" %}
+  {% for wingmasvenue in first_wingmas %}
+      | {{ wingmasvenue.venuename }} | 
+  {% endfor %}
+  
 </div>
