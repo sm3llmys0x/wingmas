@@ -9,14 +9,14 @@ layout: base
 
   {{ content }}
 
-
+<!-- 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
     {% assign posts = site.posts %}
   {% endif %}
-
-
+ -->
+<!-- 
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -37,8 +37,8 @@ layout: base
       </li>
       {%- endfor -%}
     </ul>
-
-    {% if site.paginate %}
+ -->
+<!--     {% if site.paginate %}
       <div class="pager">
         <ul class="pagination">
         {%- if paginator.previous_page %}
@@ -56,28 +56,34 @@ layout: base
       </div>
     {%- endif %}
 
-  {%- endif -%}
+  {%- endif -%} -->
 
-  {% assign first_wingmas = site.data.wingvenues | where: "wingmasdate", "12/03/2016" %}
   <section class="gradient-custom-5">
-  <div class="container py-5">
-    <div class="main-timeline-5">
-      <div class="timeline-5 right-5">
-        <div class="card">
-          <div class="card-body p-4">
-            <h5>Title of section 1</h5>
-            <span class="small text-muted"><i class="fas fa-clock me-1"></i>21 March, 2020</span>
-            <p class="mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque
-              diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis
-              sagittis ligula in sodales vehicula....</p>
+    <div class="container py-5">
+      <div class="main-timeline-5">
+
+        {% assign wingmasByDate = site.data.wingvenues | group_by: "wingmasdate"%}
+        {% assign sortedWingmasByDate = wingmasByDate | sort: "name", "first" | reverse %}
+        {% for wingmasinfo in sortedWingmasByDate %}
+          <div class="timeline-5 right-5">
+            <div class="card">
+              <div class="card-body p-4">
+                <h5>{{ wingmasinfo.name | date_to_string: "ordinal", "US"}}</h5>
+                <!-- <span class="small text-muted"><i class="fas fa-clock me-1"></i>21 March, 2020</span> -->
+                <p class="mt-2 mb-0">
+                  <ul>
+                    {% for wingmasVenue in wingmasinfo.items %}
+                      <li> {{wingmasVenue.venuename}} </li>
+                    {% endfor %}
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+            <p></p>
+        {% endfor %}
+
       </div>
     </div>
-  </div>
-  </section>
-  {% for wingmasvenue in first_wingmas %}
-      | {{ wingmasvenue.venuename }} | 
-  {% endfor %}
-  
+  </section>  
 </div>

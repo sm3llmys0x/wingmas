@@ -1,38 +1,32 @@
 wingmasnum,wingmasdate,venuename,streetaddress,city,state,zip
-0.5,10/29/2016,Wingman,3201 Mountain Rd # 108,Pasadena,MD,21122
-
-1,12/03/2016,Mt. Washington Tavern, 5700 Newbury St.,Baltimore,MD,21209
-1,12/03/2016,iBar,2118 Maryland Ave,Baltimore,MD,21218
-1,12/03/2016,Kislings Tavern,2100 Fleet St,Baltimore,MD,21231
-1,12/03/2016,Delia Foley's,1439 S Charles St,Baltimore,MD,21230
-
-?,12/15/2018,Hamilton Tavern,5506 Harford Rd,Baltimore,MD,21214
-?,12/15/2018,iBar,2118 Maryland Ave,Baltimore,MD,21218
-?,12/15/2018,Joe Squared,33 W North Ave,Baltimore,MD,21201
-?,12/15/2018,The Dizz,300 W 30th St,Baltimore,MD,21211
-
-?,12/27/2019,The Queen's Truckstaurant,3515 Clipper Mill Rd,Baltimore,MD,21211
-?,12/27/2019,R. House,301 W 29th St,Baltimore,MD,21211
-?,12/27/2019,The Local Fry,711 W 40th St Suite 152,Baltimore,MD,21211
-?,12/27/2019,Chef BobbyD Restaurant Baltimore,4032 Falls Rd,Baltimore,MD,21211
-?,12/27/2019,Frazier's On the Avenue,919 W 36th St,Baltimore,MD,21211
-?,12/27/2019,Rocket to Venus,3360 Chestnut Ave,Baltimore,MD,21211
-?,12/27/2019,Nepenthe Brewing Co.,3626 Falls Rd,Baltimore,MD,21211
-
-?,07/31/2021,The CIVIL,518 N Charles St,Baltimore,MD,21201
-?,07/31/2021,Cheezy Mike's Food Emporium,520 Park Ave,Baltimore,MD,21201
-?,07/31/2021,Dooby's,802 N Charles St,Baltimore,MD,21201
-?,07/31/2021,Turp's Sports Bar & Restaurant,1317 N Charles St,Baltimore,MD,21201
-?,07/31/2021,The Brass Tap,1205 W Mt Royal Ave,Baltimore,MD,21217
-?,07/31/2021,The Owl Bar,1 E Chase St,Baltimore,MD,21202
-?,07/31/2021,Wet City,223 W Chase St,Baltimore,MD, 21201
-?,07/31/2021,Topside,101 W Monument St,Baltimore,MD,21201
-
-?,11/21/2021,West End Grill,2049 West St,Annapolis,MD ,21401
-
-?,04/21/2023,Alexander's Tavern,710 S Broadway,Baltimore,MD,21231
-?,04/21/2023,Twist Fells Point,723 S Broadway,Baltimore,MD,21231
-?,04/21/2023,Slainte Irish Pub and Restaurant,1700 Thames St,Baltimore,MD,21231
-?,04/21/2023,Todd Conor's,700 S Broadway,Baltimore,MD,21231
-?,04/21/2023,The Choptank,1641 Aliceanna St,Baltimore,MD,21231
-?,04/21/2023,Max's Taphouse,733 S Broadway,Baltimore,MD,21231
+0.5,2016/10/29,Wingman,3201 Mountain Rd # 108,Pasadena,MD,21122
+1,2016/12/03,Mt. Washington Tavern, 5700 Newbury St.,Baltimore,MD,21209
+1,2016/12/03,iBar,2118 Maryland Ave,Baltimore,MD,21218
+1,2016/12/03,Kislings Tavern,2100 Fleet St,Baltimore,MD,21231
+1,2016/12/03,Delia Foley's,1439 S Charles St,Baltimore,MD,21230
+?,2018/12/15,Hamilton Tavern,5506 Harford Rd,Baltimore,MD,21214
+?,2018/12/15,iBar,2118 Maryland Ave,Baltimore,MD,21218
+?,2018/12/15,Joe Squared,33 W North Ave,Baltimore,MD,21201
+?,2018/12/15,The Dizz,300 W 30th St,Baltimore,MD,21211
+?,2019/12/27,The Queen's Truckstaurant,3515 Clipper Mill Rd,Baltimore,MD,21211
+?,2019/12/27,R. House,301 W 29th St,Baltimore,MD,21211
+?,2019/12/27,The Local Fry,711 W 40th St Suite 152,Baltimore,MD,21211
+?,2019/12/27,Chef BobbyD Restaurant Baltimore,4032 Falls Rd,Baltimore,MD,21211
+?,2019/12/27,Frazier's On the Avenue,919 W 36th St,Baltimore,MD,21211
+?,2019/12/27,Rocket to Venus,3360 Chestnut Ave,Baltimore,MD,21211
+?,2019/12/27,Nepenthe Brewing Co.,3626 Falls Rd,Baltimore,MD,21211
+?,2021/07/31,The CIVIL,518 N Charles St,Baltimore,MD,21201
+?,2021/07/31,Cheezy Mike's Food Emporium,520 Park Ave,Baltimore,MD,21201
+?,2021/07/31,Dooby's,802 N Charles St,Baltimore,MD,21201
+?,2021/07/31,Turp's Sports Bar & Restaurant,1317 N Charles St,Baltimore,MD,21201
+?,2021/07/31,The Brass Tap,1205 W Mt Royal Ave,Baltimore,MD,21217
+?,2021/07/31,The Owl Bar,1 E Chase St,Baltimore,MD,21202
+?,2021/07/31,Wet City,223 W Chase St,Baltimore,MD, 21201
+?,2021/07/31,Topside,101 W Monument St,Baltimore,MD,21201
+?,2021/11/21,West End Grill,2049 West St,Annapolis,MD ,21401
+?,2023/04/21,Alexander's Tavern,710 S Broadway,Baltimore,MD,21231
+?,2023/04/21,Twist Fells Point,723 S Broadway,Baltimore,MD,21231
+?,2023/04/21,Slainte Irish Pub and Restaurant,1700 Thames St,Baltimore,MD,21231
+?,2023/04/21,Todd Conor's,700 S Broadway,Baltimore,MD,21231
+?,2023/04/21,The Choptank,1641 Aliceanna St,Baltimore,MD,21231
+?,2023/04/21,Max's Taphouse,733 S Broadway,Baltimore,MD,21231
