@@ -9,81 +9,95 @@ layout: base
 
   {{ content }}
 
-<!-- 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
- -->
-<!-- 
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
- -->
-<!--     {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%} -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="/assets/images/WingAnatomy101.png" alt=""></img>
+    </div>
+  </div>
 
   <section class="gradient-custom-5">
-    <div class="container py-5">
-      <div class="main-timeline-5">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm" style="position:relative;padding-left:0px">
+              <img src="/assets/images/buffalosaucespoondrip.png" alt=""></img>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm">
+            <div class="main-timeline-5">
+              {% assign wingmasByDate = site.data.wingvenues | group_by: "wingmasdate"%}
+              {% assign sortedWingmasByDate = wingmasByDate | sort: "name", "first" | reverse %}
+              {% for wingmasinfo in sortedWingmasByDate %}
+                <div class="timeline-5 right-5">
+                  <div class="card">
+                    <!-- style="border-image-source:url(/assets/images/longtimelinedrip.png);border-image-slice:20;border-image-width:20;border-image-repeat:round;border-image-outset: 20" > -->
+                  
+                    <div id="{{wingmasinfo.name | remove: '/'}}" class="carousel slide" data-bs-ride="false">
+                      {% assign wingmasDateString = {{wingmasinfo.name | remove: '/'}} %}
 
-        {% assign wingmasByDate = site.data.wingvenues | group_by: "wingmasdate"%}
-        {% assign sortedWingmasByDate = wingmasByDate | sort: "name", "first" | reverse %}
-        {% for wingmasinfo in sortedWingmasByDate %}
-          <div class="timeline-5 right-5">
-            <div class="card">
-              <div class="card-body p-4">
-                <h5>{{ wingmasinfo.name | date_to_string: "ordinal", "US"}}</h5>
-                <!-- <span class="small text-muted"><i class="fas fa-clock me-1"></i>21 March, 2020</span> -->
-                <p class="mt-2 mb-0">
-                  <ul>
-                    {% for wingmasVenue in wingmasinfo.items %}
-                      <li> {{wingmasVenue.venuename}} </li>
-                    {% endfor %}
-                  </ul>
-                </p>
-              </div>
+                      <!-- Carousel indicators -->
+                      <div class="carousel-indicators">
+                        {% assign imgIndexZeroBased = 0 %}
+                        {% assign imgIndexOnesBased = 1 %}
+                        {% for image in site.static_files %}
+                          {% if image.path contains wingmasDateString %}
+                            {% if imgIndexZeroBased == 0 %}
+                              <button type="button" data-bs-target="#{{wingmasDateString}}" data-bs-slide-to="{{imgIndexZeroBased}}" class="active" aria-current="true" aria-label="Slide {{imgIndexOnesBased}}"></button>
+                            {% else %}
+                              <button type="button" data-bs-target="#{{wingmasDateString}}" data-bs-slide-to="{{imgIndexZeroBased}}" aria-label="Slide {{imgIndexOnesBased}}"></button>
+                            {% endif %}
+                            {% assign imgIndexZeroBased = imgIndexZeroBased | plus:1 %}
+                            {% assign imgIndexOnesBased = imgIndexOnesBased | plus:1 %}
+                          {% endif %}
+                        {% endfor %}
+
+                      </div>
+                      <!-- Wrapper for carousel items -->
+                      <div class="carousel-inner">
+                        {% assign imgIndexZeroBased = 0 %}
+                        {% assign imgIndexOnesBased = 1 %}
+                        {% for image in site.static_files %}
+                          {% if image.path contains wingmasDateString %}
+                            {% if imgIndexZeroBased == 0 %}
+                              <div class="carousel-item active"><img src="{{image.path}}" /></div>
+                            {% else %}
+                              <div class="carousel-item"><img src="{{image.path}}" /></div>
+                            {% endif %}
+                            {% assign imgIndexZeroBased = imgIndexZeroBased | plus:1 %}
+                            {% assign imgIndexOnesBased = imgIndexOnesBased | plus:1 %}
+                          {% endif %}
+                        {% endfor %}
+
+                        <!-- Carousel controls --> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#{{wingmasinfo.name | remove: '/'}}" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#{{wingmasinfo.name | remove: '/'}}" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+
+                      </div>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                      <h5>{{ wingmasinfo.name | date_to_string: "ordinal", "US"}}</h5>
+                      <p class="mt-2 mb-0">
+                        <ul>
+                          {% for wingmasVenue in wingmasinfo.items %}
+                            <li> {{wingmasVenue.venuename}} </li>
+                          {% endfor %}
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
             </div>
           </div>
-            <p></p>
-        {% endfor %}
-
+        </div>
       </div>
-    </div>
   </section>  
 </div>
