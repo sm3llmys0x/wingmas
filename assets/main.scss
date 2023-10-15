@@ -15,8 +15,8 @@
     content: "";
     position: absolute;
     width: 5px;
-    background-image:url("/assets/images/timelinedrip.png");
     opacity: 80%;
+    background-color: rgb(255,106,0);
     top: 0;
     bottom: 0;
     left: auto;
@@ -37,9 +37,10 @@
     width: 17px;
     height: 17px;
     right: 1px;
-    background-color: rgb(253,108,1);
+    background-color: rgb(255,106,0);
     top: 18px;
-    border-radius: 50%;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
     z-index: 1;
   }
   
@@ -56,9 +57,9 @@
     top: 18px;
     z-index: 1;
     left: 30px;
-    border: medium solid rgb(253,108,1);
+    border: medium solid rgb(255,106,0);
     border-width: 10px 10px 10px 0;
-    border-color: transparent rgb(253,108,1) transparent transparent;
+    border-color: transparent rgb(255,106,0) transparent transparent;
   }
   
   /* Fix the circle for containers on the right side */

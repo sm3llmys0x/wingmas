@@ -6,19 +6,12 @@ layout: base
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-
   {{ content }}
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <img src="/assets/images/WingAnatomy101.png" alt=""></img>
-    </div>
-  </div>
-
   <section class="gradient-custom-5">
     <div class="container">
+
         <div class="row">
-          <div class="col-sm" style="position:relative;padding-left:0px">
+          <div class="col-sm-3" style="position:relative;padding-left:6px">
               <img src="/assets/images/buffalosaucespoondrip.png" alt=""></img>
           </div>
         </div>
@@ -31,9 +24,8 @@ layout: base
               {% for wingmasinfo in sortedWingmasByDate %}
                 <div class="timeline-5 right-5">
                   <div class="card">
-                    <!-- style="border-image-source:url(/assets/images/longtimelinedrip.png);border-image-slice:20;border-image-width:20;border-image-repeat:round;border-image-outset: 20" > -->
                   
-                    <div id="{{wingmasinfo.name | remove: '/'}}" class="carousel slide" data-bs-ride="false">
+                    <div id="{{wingmasinfo.name | remove: '/'}}" class="carousel slide" data-bs-ride="false" style="padding:3px">
                       {% assign wingmasDateString = {{wingmasinfo.name | remove: '/'}} %}
 
                       <!-- Carousel indicators -->
@@ -54,7 +46,7 @@ layout: base
 
                       </div>
                       <!-- Wrapper for carousel items -->
-                      <div class="carousel-inner">
+                      <div class="carousel-inner" style="border-radius: 5%">
                         {% assign imgIndexZeroBased = 0 %}
                         {% assign imgIndexOnesBased = 1 %}
                         {% for image in site.static_files %}
@@ -98,6 +90,13 @@ layout: base
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <!-- <div class="col-sm-3" style="position:relative">
+              <img src="/assets/images/saucepool.png" alt="Sauce Pool" style="padding-left:-30px;rotate:-5deg"></img>
+          </div> -->
+        </div>
+
       </div>
   </section>  
 </div>
